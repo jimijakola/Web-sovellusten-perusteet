@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Määrittää dokumentin merkistökoodauksen ja viewportin skaalauksen -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matopeli</title>
+    <!-- Linkki ulkoiseen tyylitiedostoon -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Valikkopalkki -->
+    <nav>
+        <ul>
+            <!-- Linkit aloitussivulle ja scoreboardiin -->
+            <li><a href="index.html">Aloitussivu</a></li>
+            <li><a href="#" id="scoreboard-button">Scoreboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pelialueen säiliö -->
+    <div id="game-container">
+        <!-- Canvas-elementti pelin piirtämistä varten -->
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <!-- Kuva omenaa varten, aluksi piilotettuna -->
+        <img id="apple" src="apple.png" style="display: none;">
+        <!-- Scoreboardin modaalinen ikkuna, aluksi piilotettuna -->
+        <div id="scoreboard-modal" class="modal">
+            <!-- Modaalin sisältö -->
+            <div class="modal-content">
+                <!-- Sulje-nappi -->
+                <span class="close">&times;</span>
+                <!-- Otsikko -->
+                <h2>Scoreboard</h2>
+                <!-- Pelaajan pistemäärä -->
+                <p>Pisteet: <span id="score">0</span></p>
+                <!-- Paras pistemäärä -->
+                <p>Highscore: <span id="highscore">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skriptitiedosto pelilogiikkaa varten -->
+    <script src="script.js"></script>
+</body>
+</html>

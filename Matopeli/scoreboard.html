@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <!-- CSS-tyylit scoreboardille -->
+    <style>
+        .scoreboard {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 2px solid #333;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scoreboard-elementti -->
+    <div class="scoreboard">
+        <h2>Highscore</h2>
+        <!-- Highscoren näyttö -->
+        <p id="highscore">0</p>
+        <!-- Sulje-painike -->
+        <div class="close" onclick="closeScoreboard()">Close</div>
+    </div>
+
+    <script>
+        // Haetaan highscore localStoragesta ja asetetaan se näkyviin
+        document.getElementById('highscore').textContent = localStorage.getItem('highscore') || 0;
+
+        // Funktio scoreboardin sulkemiseksi
+        function closeScoreboard() {
+            window.close();
+        }
+    </script>
+</body>
+</html>

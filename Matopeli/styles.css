@@ -1,0 +1,55 @@
+/* Asettaa fontin ja poistaa sivun marginaalit ja sisäiset täytöt, estää sivun scrollaamasta */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Määrittelee pelialueen koon ja asettaa sen keskelle sivua */
+#game-container {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    border: 2px solid black;
+    position: relative;
+}
+
+/* Määrittelee modaalin ulkoasun ja asettaa sen piiloon */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Määrittelee modaalin sisällön ulkoasun */
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px; 
+}
+
+/* Määrittelee sulkupainikkeen ulkoasun */
+.close {
+    color: #abadab;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Määrittelee sulkupainikkeen hover- ja focus-tilat */
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
