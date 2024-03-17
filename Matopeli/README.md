@@ -1,6 +1,6 @@
 # Web-sovellusten perusteet harjoitustyö
 
-Tervetuloa Matopeliin! Tämä on yksinkertainen peli, jossa pelaaja ohjaa madon liikkeitä nuolinäppäimillä ja yrittää syödä omenoita kasvaakseen ja kerätäkseen pisteitä.
+Tervetuloa Matopeliin! Tämä on yksinkertainen ja hyvin simppeli peli, joka täyttää vaatimukset ja josta on suht helppo halutessaan lähteä parantelemaan ulkoasua ja toiminnallisuuksia. Pelissä pelaaja ohjaa madon liikkeitä nuolinäppäimillä ja yrittää syödä omenoita kasvaakseen ja kerätäkseen pisteitä.
 
 ## Pelin ohjeet
 
