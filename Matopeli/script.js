@@ -2,7 +2,7 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Määritellään laattojen ja ruudukon koko sekä muuttujat mädälle, omenalle ja pisteille
+// Määritellään laattojen ja ruudukon koko sekä muuttujat madolle, omenalle ja pisteille
 const tileSize = 20;
 const gridSize = 20;
 let snake = [{x: 10, y: 10}]; // Alustetaan mato alkupaikkaan
@@ -25,7 +25,7 @@ function updateHighscore() {
     showScoreboard(score, newHighscore);
 }
 
-// Kuunnellaan näppäimistöä ja asetetaan matolle liikesuunta
+// Kuunnellaan näppäimistöä ja asetetaan madolle liikesuunta
 document.addEventListener('keydown', function(event) {
     switch (event.key) {
         case 'ArrowUp':
@@ -87,13 +87,13 @@ function drawScore() {
 
 // Liikuttaa matoa
 function moveSnake() {
-    const head = {x: snake[0].x + dx, y: snake[0].y + dy}; // Määrittää matopään uuden sijainnin
-    snake.unshift(head); // Lisää uuden matopään
+    const head = {x: snake[0].x + dx, y: snake[0].y + dy}; // Määrittää madonpalalle uuden sijainnin
+    snake.unshift(head); // Lisää uuden madonpalan
     if (head.x === apple.x && head.y === apple.y) { // Jos mato syö omenan
         score++; // Kasvattaa pistemäärää
         generateApple(); // Generoi uuden omenan
     } else {
-        snake.pop(); // Poistaa viimeisen matopään
+        snake.pop(); // Poistaa viimeisen madonpalan
     }
     checkCollision(); // Tarkistaa mahdollisen törmäyksen
 }
@@ -128,7 +128,7 @@ function gameOver() {
 
 // Nollaa pelin
 function resetGame() {
-    snake = [{x: 10, y: 10}]; // Asettaa maton alkupaikkaan
+    snake = [{x: 10, y: 10}]; // Asettaa madon alkupaikkaan
     apple = {x: 15, y: 15}; // Asettaa omenan alkupaikkaan
     dx = 0;
     dy = 0;
